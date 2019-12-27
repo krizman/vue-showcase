@@ -9,9 +9,12 @@
     <td>{{ field.crop }}</td>
     <td>
       <select class="form-control">
-        <option value="1" :selected="field.variety == 1">One</option>
-        <option value="2" :selected="field.variety == 2">Two</option>
-        <option value="3" :selected="field.variety == 3">Three</option>
+        <option
+          v-for="variety in varieties"
+          :key="variety.id"
+          :value="variety.id"
+          :selected="field.varietyId == variety.id"
+        >{{ variety.value }}</option>
       </select>
     </td>
     <td>{{ field.cloverPlanted | preetyBool }}</td>
@@ -22,13 +25,31 @@
 
 <script>
 export default {
+  data() {
+    return {
+      varieties: [
+        {
+          id: 1,
+          value: "Ruderalis"
+        },
+        {
+          id: 2,
+          value: "Pine cone"
+        },
+        {
+          id: 3,
+          value: "Short Joe"
+        }
+      ]
+    };
+  },
   props: {
     field: {
       id: Number,
       name: String,
       hectares: Number,
       crop: String,
-      variety: String,
+      varietyId: Number,
       cloverPlanted: Boolean,
       ecoCert: Boolean,
       acidicSoil: Boolean

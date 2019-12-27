@@ -17,7 +17,7 @@
       </tbody>
     </table>
     <label for="varietyToggle">External variety change:</label>
-    <input type="number" @change="field.variety = $event.target.value" id="varietyToggle" />
+    <input type="number" v-model="field.varietyId" id="varietyToggle" min="1" max="3" />
   </div>
 </template>
 
@@ -33,7 +33,7 @@ export default {
         name: "BO_6542",
         hectares: 36.08,
         crop: "Corn",
-        variety: "Organic corn",
+        varietyId: 2,
         cloverPlanted: true,
         ecoCert: true,
         acidicSoil: false
