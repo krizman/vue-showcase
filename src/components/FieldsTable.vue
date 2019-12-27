@@ -3,7 +3,7 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Field</th>
-        <th scope="">Hectares</th>
+        <th scope="col">Hectares</th>
         <th scope="col">Crop (season 2020)</th>
         <th scope="col">Variety</th>
         <th scope="col">Clover planted</th>
@@ -12,28 +12,35 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">
-          <strong>BO_6542</strong>
-          <br>
-          <span># 1327296</span>
-        </th>
-        <td>36.08</td>
-        <td>Corn</td>
-        <td>Organic</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>No</td>
-      </tr>
+      <FieldTableRow :field="field"></FieldTableRow>
     </tbody>
   </table>
 </template>
 
 <script>
+import FieldTableRow from "./FieldTableRow";
+
 export default {
-  name: 'FieldsTable',
+  name: "FieldsTable",
+  data() {
+    return {
+      field: {
+        id: 1327296,
+        name: "BO_6542",
+        hectares: 36.08,
+        crop: "Corn",
+        variety: "Organic corn",
+        cloverPlanted: true,
+        ecoCert: true,
+        acidicSoild: false
+      }
+    };
+  },
   props: {
     msg: String
+  },
+  components: {
+    FieldTableRow
   }
-}
+};
 </script>

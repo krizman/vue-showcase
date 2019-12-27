@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <FieldsTable msg="Welcome to Your Vue.js App"/>
+    <FieldsTable msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import FieldsTable from './components/FieldsTable.vue'
+import FieldsTable from "./components/FieldsTable.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     FieldsTable
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
