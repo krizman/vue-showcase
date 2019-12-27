@@ -3,14 +3,14 @@
     <th scope="row">
       <strong>{{ field.name }}</strong>
       <br />
-      <span># 1327296</span>
+      <span># {{ field.id }}</span>
     </th>
-    <td>36.08</td>
-    <td>Corn</td>
-    <td>Organic</td>
-    <td>Yes</td>
-    <td>Yes</td>
-    <td>No</td>
+    <td>{{ field.hectares }}</td>
+    <td>{{ field.crop }}</td>
+    <td>{{ field.variety }}</td>
+    <td>{{ field.cloverPlanted }}</td>
+    <td>{{ field.ecoCert }}</td>
+    <td>{{ field.acidicSoil}}</td>
   </tr>
 </template>
 
@@ -25,7 +25,7 @@ export default {
       variety: String,
       cloverPlanted: Boolean,
       ecoCert: Boolean,
-      acidicSoild: Boolean
+      acidicSoil: Boolean
     }
   }
 };

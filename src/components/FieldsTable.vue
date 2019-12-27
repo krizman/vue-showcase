@@ -12,13 +12,13 @@
       </tr>
     </thead>
     <tbody>
-      <FieldTableRow :field="field"></FieldTableRow>
+      <FieldsTableRow :field="field" />
     </tbody>
   </table>
 </template>
 
 <script>
-import FieldTableRow from "./FieldTableRow";
+import FieldsTableRow from "./FieldsTableRow";
 
 export default {
   name: "FieldsTable",
@@ -32,15 +32,12 @@ export default {
         variety: "Organic corn",
         cloverPlanted: true,
         ecoCert: true,
-        acidicSoild: false
+        acidicSoil: false
       }
     };
   },
-  props: {
-    msg: String
-  },
   components: {
-    FieldTableRow
+    FieldsTableRow
   }
 };
 </script>
