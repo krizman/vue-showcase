@@ -14,9 +14,9 @@
         <option value="3" :selected="field.variety == 3">Three</option>
       </select>
     </td>
-    <td>{{ field.cloverPlanted }}</td>
-    <td>{{ field.ecoCert }}</td>
-    <td>{{ field.acidicSoil}}</td>
+    <td>{{ field.cloverPlanted | preetyBool }}</td>
+    <td>{{ field.ecoCert | preetyBool }}</td>
+    <td>{{ field.acidicSoil | preetyBool }}</td>
   </tr>
 </template>
 
