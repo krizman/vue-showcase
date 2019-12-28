@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   props: {
     field: {
@@ -38,9 +40,7 @@ export default {
     }
   },
   computed: {
-    varieties() {
-      return this.$store.state.varieties;
-    }
+    ...mapState(["varieties"])
   }
 };
 </script>

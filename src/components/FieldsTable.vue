@@ -21,13 +21,12 @@
 
 <script>
 import FieldsTableRow from "./FieldsTableRow";
+import { mapState } from "vuex";
 
 export default {
   name: "FieldsTable",
   computed: {
-    fields() {
-      return this.$store.state.regions[0].fields;
-    }
+    ...mapState(["fields"])
   },
   components: {
     FieldsTableRow
