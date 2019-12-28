@@ -25,24 +25,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      varieties: [
-        {
-          id: 1,
-          value: "Ruderalis"
-        },
-        {
-          id: 2,
-          value: "Pine cone"
-        },
-        {
-          id: 3,
-          value: "Short Joe"
-        }
-      ]
-    };
-  },
   props: {
     field: {
       id: Number,
@@ -53,6 +35,11 @@ export default {
       cloverPlanted: Boolean,
       ecoCert: Boolean,
       acidicSoil: Boolean
+    }
+  },
+  computed: {
+    varieties() {
+      return this.$store.state.varieties;
     }
   }
 };

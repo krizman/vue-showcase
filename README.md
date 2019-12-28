@@ -55,3 +55,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [ ] Add router and use Season and Region in the URL
 - [ ] introduce HTTP requests to persist the store data
 - [ ] introduce TypeScript
+
+## DEV Notes
+
+- If IE support is warranted, `es6-promise` library is required to support vuex.js promise dependency. See more details here: https://vuex.vuejs.org/installation.html#promise
