@@ -3,7 +3,7 @@
 ## Proposed development IDEs
 
 Any IDE used for frontend / JavaScript development supports vue.js but with different development capabilities and experience.
-I would suggest either **WebStorm** or **Visual Studio Code**.
+I would suggest either [WebStorm](https://www.jetbrains.com/webstorm/download/) or [Visual Studio Code](https://code.visualstudio.com/download).
 
 I am using Visual Studio Code, because:
 
@@ -22,11 +22,15 @@ You can get both by installing [node.js](https://nodejs.org/en/)
 
 ## Project setup
 
+navigate to project root directory and execute the following command:
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
+In order to start a development server and run the app, execute the following command:
 
 ```
 npm run serve
@@ -50,7 +54,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODOs:
 
-- [ ] introduce common store/state object which contains application data (which is currently hardcoded and spread throughout vue.js components) and all the getters/setters/mutations it supports
+- [x] introduce common store/state object which contains application data (which is currently hardcoded and spread throughout vue.js components) and all the getters/setters/mutations it supports
 - [ ] introduce "Season" and "Area/Region" codelists. Implement UI selectors, which cause the table to show relevant "Season" and "Region" data.
 - [ ] Add router and use Season and Region in the URL
 - [ ] introduce HTTP requests to persist the store data

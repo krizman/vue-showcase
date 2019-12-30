@@ -1,11 +1,26 @@
-import Vue from "vue"
+import Vue from "vue";
 import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     state: {
+        seasons: ["2018", "2019", "2020"],
+        regions: {
+            "1": {
+                name: "BOKA_PARCELE"
+            },
+            "2": {
+                name: "DJURDJEVO"
+            },
+            "3": {
+                name: "DJURDJEVO_PARCELE"
+            },
+            "4": {
+                name: "KUMANE"
+            },
+        },
         varieties: [
             {
                 id: 1,
