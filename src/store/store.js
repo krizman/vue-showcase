@@ -140,7 +140,10 @@ export default new Vuex.Store({
                         acidicSoil: true
                     }
                 }
-            }
+            },
+            "4": {
+                name: "KUMANE"
+            },
         }
     }
 });

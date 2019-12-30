@@ -16,11 +16,14 @@
         <FieldsTableRow v-for="(field, key) in fields" :field="field" :key="key" />
       </tbody>
     </table>
+    <div v-if="!fields" class="text-center">
+      <p>Data not available for region {{ regionId }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import FieldsTableRow from "./FieldsTableRow";
+import FieldsTableRow from "./FieldsTableRow.vue";
 
 export default {
   name: "FieldsTable",
